@@ -1,0 +1,29 @@
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+  {{ $relURL := ("" | relURL) }}
+  {{ $relURL := substr $relURL 0 (add (len $relURL) -1) }}
+  <div>
+    <nav role="pagination" class="pagination">
+      <!--
+      {{ if .Paginator.HasPrev }}
+        {{ if eq (.Paginator.First.PageNumber) (.Paginator.Prev.PageNumber) }}
+        {{ else }}
+          <a href="{{ $relURL }}{{ .Paginator.First.URL }}">&lArr;</a>
+        {{ end }}
+        <a href="{{ $relURL }}{{ .Paginator.Prev.URL }}">{{ add -1 (.Paginator.PageNumber) }}</a>
+      {{ end }}
+      <span class="">{{ .Paginator.PageNumber }}</span>
+      {{ if .Paginator.HasNext }}
+        <a href="{{ $relURL }}{{ .Paginator.Next.URL }}">{{ add 1 (.Paginator.PageNumber) }}</a>
+        {{ if eq (.Paginator.Next.PageNumber) (.Paginator.Last.PageNumber) }}
+        {{ else }}
+          <a href="{{ $relURL }}{{ .Paginator.Last.URL }}">&rArr;</a>
+        {{ end }}
+      {{ end }}
+       -->
+       {{ $paginator := .Paginator }}
+       {{ range .Paginator.Pagers }}
+         <a href="{{ $relURL }}{{ .URL }}" {{ if eq .PageNumber $paginator.PageNumber }}class="current-page"{{ end }}>{{ .PageNumber }}</a>
+       {{ end }}
+    </nav>
+  </div>
+{{ end }}

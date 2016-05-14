@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<article>
+  <h1>{{ .Title }}</h1>
+  <!-- <div>FuzzyWordCount: {{ .FuzzyWordCount }}</div> -->
+  <!-- <div>WordCount: {{ .WordCount }}</div> -->
+  <!-- <div>ReadingTime: {{ .ReadingTime }}minutes</div> -->
+  <!-- <div>Weight: {{ .Weight }}</div> -->
+  <!-- <div>RawContent: {{ .RawContent }}</div> -->
+  {{ if .Section }}
+    <div>
+      Table Of Contents
+      {{ .TableOfContents }}
+    </div>
+  {{ end }}
+  {{ partial "adsense.html" . }}
+  {{ .Content }}
+  {{ partial "adsense.html" . }}
+  {{ partial "disqus.html" . }}
+</article>
+
+{{ partial "footer.html" . }}

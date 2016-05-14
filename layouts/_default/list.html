@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+
+<div>
+  {{ $paginator := .Paginate (where .Data.Pages "Section" "ne" "") 10 }}
+  {{ range $paginator.Pages }}
+    {{ .Render "li" }}
+  {{ end }}
+  {{ partial "adsense.html" . }}
+  {{ partial "pagination.html" . }}
+</div>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,6 @@
+<a href="{{ if .IsPage }}{{ .RelPermalink }}{{ else }}{{ .Permalink }}{{ end }}" class="article">
+  <div class="article-box">
+    <div class="article-title">{{ .Title }}</div>
+    <div class="article-meta">{{ .Date.Format "Jan 02 2006" }}</div>
+  </div>
+</a>

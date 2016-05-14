@@ -1,0 +1,12 @@
+      <footer>
+        <small>
+          &copy; {{ .Now.Format "2006" }} <a href="{{ "" | relURL }}">{{ .Site.Title }}</a>
+        </small>
+      </footer>
+    </div><!-- wrapper -->
+    <script src="{{ "" | relURL }}js/js.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    {{ partial "analytics.html" . }}
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:og="http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{{ if .IsPage }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    <meta name="description" content="{{ if and .IsPage (ne .Section "") }}{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="{{ if and .IsPage (ne .Section "") }}{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="twitter:image" content="{{ "" | relURL }}img/logo.png">
+    <meta name="twitter:site" content="{{ .Site.Params.twitter }}">
+    <meta name="twitter:title" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ if and .IsPage (ne .Section "") }}{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:image" content="{{ "" | relURL }}img/logo.png">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:type" content="blog">
+    <meta property="og:url" content="/">
+    <link rel="stylesheet" type="text/css" href="{{ "" | relURL }}css/html5reset-1.6.1.css">
+    <link rel="stylesheet" type="text/css" href="{{ "" | relURL }}css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/github.min.css">
+    <link rel="alternate" type="application/atom+xml" href="{{ "" | relURL }}index.xml" title="{{ .Site.Title }}">
+    <link rel="icon" href="{{ "" | relURL }}img/favicon.png">
+    <link rel="apple-touch-icon" href="{{ "" | relURL }}img/apple-touch-icon.png">
+  </head>
+  <body>
+    <div id="wrapper" class="wrapper">
+      <header>
+        <div class="header-title-box">
+          <a href="{{ "" | relURL }}" class="header-title-anchor">
+            <img src="{{ "" | relURL }}img/logo.png" alt="logo" class="logo">
+            <div class="header-title">{{ .Site.Title }}</div>
+          </a>
+        </div>
+        <div class="header-about-box">
+          {{ with .Site.Params.about }}
+            <a href="{{ "" | relURL }}{{ . }}" class="header-about">About</a>
+          {{ end }}
+        </div>
+      </header>

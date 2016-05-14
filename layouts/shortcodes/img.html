@@ -1,0 +1,32 @@
+{{ if .Get "src2x" }}
+  <picture>
+    {{ with .Get "src" }}
+      {{ $src2x := . }}
+      {{ $src2x := replace $src2x ".png" "@2x.png" }}
+      {{ $src2x := replace $src2x ".jpg" "@2x.jpg" }}
+      {{ $src2x := replace $src2x ".jpeg" "@2x.jpeg" }}
+      {{ $src2x := replace $src2x ".PNG" "@2x.PNG" }}
+      {{ $src2x := replace $src2x ".JPG" "@2x.JPG" }}
+      {{ $src2x := replace $src2x ".JPEG" "@2x.JPEG" }}
+      <source
+      media="(min-width: 600px)"
+      srcset="/{{ . }} 1x, /{{ $src2x }} 2x"
+      >
+      <source
+      media="(min-width: 0px)"
+      srcset="/{{ . }}"
+      >
+    {{ end }}
+    <img
+    {{ with .Get "src" }}src="/{{ . }}"{{ end }}
+    {{ with .Get "alt" }}alt="{{ . }}"{{ end }}
+    {{ with .Get "class" }}class="{{ . }}"{{ end }}
+    >
+  </picture>
+{{ else }}
+  <img
+  {{ with .Get "src" }}src="/{{ . }}"{{ end }}
+  {{ with .Get "alt" }}alt="{{ . }}"{{ end }}
+  {{ with .Get "class" }}alt="{{ . }}"{{ end }}
+  >
+{{ end }}
