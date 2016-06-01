@@ -12,9 +12,6 @@
       "modules": true
     }
   },
-  "plugins": [
-    "json"
-  ],
   "rules": {
     "semi": [1, "always"],
     "strict": [2, "function"],
