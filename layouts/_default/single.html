@@ -2,6 +2,7 @@
 
 <article>
   <h1>{{ .Title }}</h1>
+  <div>Date: {{ .Date }}</div>
   <!-- <div>FuzzyWordCount: {{ .FuzzyWordCount }}</div> -->
   <div>WordCount: {{ .WordCount }}</div>
   <div>ReadingTime: {{ .ReadingTime }}minutes</div>
@@ -17,6 +18,10 @@
   {{ .Content }}
   {{ partial "adsense.html" . }}
   {{ partial "disqus.html" . }}
+  <div class="pagination">
+    {{ if .PrevInSection }}<a href="{{ .PrevInSection.Permalink }}">Prev</a>{{ end }}
+    {{ if .NextInSection }}<a href="{{ .NextInSection.Permalink }}">Next</a>{{ end }}
+  </div>
 </article>
 
 {{ partial "footer.html" . }}
