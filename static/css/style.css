@@ -192,6 +192,9 @@ iframe {
   margin: 1rem 0;
   max-width: 100%; }
 
+.MJXc-display {
+  overflow: scroll; }
+
 @media all and (max-width: 599px) {
   .wrapper {
     margin: 0 2%;
