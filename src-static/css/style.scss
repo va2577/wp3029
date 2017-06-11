@@ -194,6 +194,13 @@ iframe {
   max-width: 100%;
 }
 
+table,
+td,
+th {
+  border: 1px $color-light3 solid;
+  border-collapse: collapse;
+}
+
 .article {
   color: $color;
   text-decoration: none;
