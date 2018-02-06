@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+{{ $plural := .Data.Plural }}
+<div>
+  {{ range $key, $value := .Data.Terms }}
+    <a href="{{ "" | relURL }}{{ $plural }}/{{ $key | urlize }}" class="article">
+      <span class="article-title">{{ $key }}</span>
+      <span class="article-meta">({{ len $value }})</span>
+    </a>
+    ,
+  {{ end }}
+  {{ partial "adsense.html" . }}
+</div>
+
+{{ partial "footer.html" . }}

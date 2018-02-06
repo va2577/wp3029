@@ -14,43 +14,20 @@ body {
   width: 600px; }
 
 header {
-  display: table;
+  border-bottom-color: #676767;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
   font-family: "TsukuARdGothic-Regular", "ヒラギノ丸ゴ ProN W4", "Hiragino Kaku Gothic ProN", "UD デジタル  教科書体 NP-B", YuGothic, "Yu Gothic", "游ゴシック体", "游ゴシック";
   margin: 1rem 0; }
   header a {
     color: #808080;
     text-decoration: none; }
 
-.header-title-box {
-  display: table-cell;
-  text-align: left;
-  width: 20%; }
-
-.header-title-anchor {
-  display: inline-table; }
-
 .logo {
   border-radius: 3rem;
-  display: table-cell;
   height: 3rem;
   margin: 0;
   width: 3rem; }
-
-.header-title {
-  display: table-cell;
-  font-size: .3rem;
-  height: 3rem;
-  line-height: .3rem;
-  vertical-align: middle; }
-
-.header-about-box {
-  display: table-cell;
-  text-align: right;
-  vertical-align: middle;
-  width: 20%; }
-
-.header-about {
-  vertical-align: middle; }
 
 footer {
   border-top-color: #676767;

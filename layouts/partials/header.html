@@ -26,15 +26,13 @@
   <body>
     <div id="wrapper" class="wrapper">
       <header>
-        <div class="header-title-box">
-          <a href="{{ "" | relURL }}" class="header-title-anchor">
-            <img src="{{ "" | relURL }}img/logo.png" alt="logo" class="logo">
-            <div class="header-title">{{ .Site.Title }}</div>
+        <div>
+          <a href="{{ "" | relURL }}">
+            <img src="{{ "" | relURL }}img/logo.png" alt="{{ .Site.Title }}" class="logo">
           </a>
         </div>
-        <div class="header-about-box">
-          {{ with .Site.Params.about }}
-            <a href="{{ "" | relURL }}{{ . }}" class="header-about">About</a>
-          {{ end }}
+        <div>
+          <a href="{{ "" | relURL }}about/">About</a>
+          <a href="{{ "" | relURL }}tags/">Tags</a>
         </div>
       </header>
