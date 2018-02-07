@@ -16,6 +16,7 @@ $font-size: 16px;
 html {
   font-size: $font-size;
   line-height: $font-size;
+  overflow-wrap: break-word;
 }
 
 body {
@@ -162,6 +163,11 @@ img {
 
 iframe {
   display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+table {
   margin: 0 auto;
   max-width: 100%;
 }

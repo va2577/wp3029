@@ -1,7 +1,8 @@
 @charset "UTF-8";
 html {
   font-size: 16px;
-  line-height: 16px; }
+  line-height: 16px;
+  overflow-wrap: break-word; }
 
 body {
   color: #808080;
@@ -121,6 +122,10 @@ img {
 
 iframe {
   display: block;
+  margin: 0 auto;
+  max-width: 100%; }
+
+table {
   margin: 0 auto;
   max-width: 100%; }
 
