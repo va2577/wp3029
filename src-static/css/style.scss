@@ -136,7 +136,10 @@ pre {
   padding: .5rem;
 }
 
-ol,
+ol {
+  margin-left: 2rem;
+}
+
 ul {
   margin-left: 1rem;
 }
