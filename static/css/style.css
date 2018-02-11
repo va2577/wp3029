@@ -82,6 +82,8 @@ p {
     background-color: #f8f8f8;
     color: #333;
     padding: 0 .5rem; }
+  p > span.mjx-chtml {
+    overflow: auto; }
 
 em {
   color: #ff4500;
@@ -184,8 +186,8 @@ th {
   margin: 1rem 0;
   max-width: 100%; }
 
-.MJXc-display {
-  overflow: scroll; }
+.table-overflow {
+  overflow: auto; }
 
 @media all and (max-width: 599px) {
   .wrapper {

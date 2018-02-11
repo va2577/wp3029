@@ -115,6 +115,12 @@ p {
     color: $color-github;
     padding: 0 .5rem;
   }
+
+  & > span {
+    &.mjx-chtml {
+      overflow: auto;
+    }
+  }
 }
 
 em {
@@ -242,8 +248,8 @@ th {
   max-width: 100%;
 }
 
-.MJXc-display {
-  overflow: scroll;
+.table-overflow {
+  overflow: auto;
 }
 
 @media all and (max-width: 599px) {
