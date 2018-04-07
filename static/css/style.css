@@ -119,10 +119,12 @@ article,
 section {
   margin: 1rem 0; }
 
-img {
+img,
+svg {
   display: block;
   height: auto;
   margin: 1rem auto;
+  max-height: 300px;
   max-width: 100%; }
 
 iframe {
